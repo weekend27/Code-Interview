@@ -1,2 +1,2 @@
-# Interview-Code
+# Code-Interview
 Code from Coding Interview Guide
