@@ -3,12 +3,12 @@ package chapter_1_stackandqueue;
 import java.util.Stack;
 
 public class Problem_09_MaximalRectangle {
-	
+
 	public static int maxRecSize(int[][] map) {
 		if (map == null || map.length == 0 || map[0].length == 0) {
 			return 0;
 		}
-		
+
 		int maxArea = 0;
 		int[] height = new int[map[0].length];
 		for (int i = 0; i < map.length; i++) {
@@ -19,12 +19,12 @@ public class Problem_09_MaximalRectangle {
 		}
 		return maxArea;
 	}
-	
+
 	public static int maxRecFromBottom(int[] height) {
 		if (height == null || height.length == 0) {
 			return 0;
 		}
-		
+
 		int maxArea = 0;
 		Stack<Integer> stack = new Stack<>();
 		for (int i = 0; i < height.length; i++) {
@@ -36,7 +36,7 @@ public class Problem_09_MaximalRectangle {
 			}
 			stack.push(i);
 		}
-		// handle the elements left in the stack, make a fake element ~0 in order to pop them out
+		// handle the elements left in the stack, make a fake element close to 0 in order to pop them out
 		while (!stack.isEmpty()) {
 			int j = stack.pop();
 			int k = stack.isEmpty() ? -1 : stack.peek();
