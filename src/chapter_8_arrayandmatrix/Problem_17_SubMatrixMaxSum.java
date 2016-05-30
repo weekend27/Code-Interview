@@ -21,7 +21,6 @@ public class Problem_17_SubMatrixMaxSum {
                 }
             }
         }
-
         return max;
     }
 
